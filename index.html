@@ -1,8 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
+    <!--========== pt PWA start==========-->
+    <meta name="theme-color" content="#0c0c0f" />
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+    <link rel="apple-touch-icon" href="./maskable_icon_x192.png" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover ,user-scalable=no"
+    />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./maskable_icon_x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./maskable_icon_x192.png"
+    />
+    <link rel="icon" type="image/x-icon" href="./maskable_icon_x192.png" />
+
+    <script type="module">
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+    <!--=========== pt PWA end===========-->
+
     <title>NNY's List</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
@@ -45,5 +82,8 @@
     </div>
 
     <script src="./app.js"></script>
+
+    <!--pt. pwa -->
+    <script src="./index.js"></script>
   </body>
 </html>
