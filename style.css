@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+  background-image: linear-gradient(120deg, #eccb5e 0%, #ee7e5f 100%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    min-height: 100vh;
+  }
+header {
+  
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+h1{
+  margin-top: 2vh;
+}
+
+form {
+  
+  width:75vw;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+form input{
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.in_data{
+ 
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  background: white;
+}
+form button {
+  border-radius:0 10px 10px 0;
+  color: #ee6843;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #ff6f47;
+  color: white;
+} 
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  margin-top: .5rem;
+}
+
+.todo-list {
+  width: 100%;
+  list-style: none;
+ 
+}
+
+.todo {
+ 
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  background: white;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.filter-todo {
+    padding: .64rem;
+    width: 100%;
+  }
+  .todo li {
+    flex: 1;
+  }
+  
+  .trash-btn{
+    border-radius:0px 10px 10px 0px;
+  }
+  .trash-btn,
+  .complete-btn {
+    background: #ff6f47;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .complete-btn {
+    background: rgb(11, 212, 162);
+  }
+  .todo-item {
+    padding: 0rem 0.5rem;
+    overflow: auto;
+  }
+  
+  .fa-trash,
+  .fa-check {
+    pointer-events: none;     /* --- asta este pt ca nu mergea decat cand apasam pe iconita svg  --- */
+  }
+  
+  .fall {
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;   /* it is class for animation */
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  /* CUSTOM SELECTOR */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+  }
+  
+  /* Custom Select */
+  .select {
+    border-radius: 10px;
+    justify-content: center;
+    width: 100%;
+    margin: .7rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+  select {
+    display: flex;
+    justify-content: center;
+    color: #ff6f47;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+   
+  }
+  
+ /* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .5rem;
+  color: #ee6843;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+/* Transition */
+
+ .select:hover::after {
+  
+    background: #ff6f47;
+    color: white;
+ 
+  /* transform: scale(1.1); */
+}  
+
+ @media (min-width:520px){
+  form , .todo-container{
+    width: 55vw;
+  }
+ }
+ @media (min-width:820px){
+  form , .todo-container{
+    width: 30vw;
+  }
+ }
